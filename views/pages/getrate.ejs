@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="/lang-logo.png">
+    </a>
+    <h1>USPS Postage Rates Calculator</h1>
+    <p>This is a Node application for the CS313 course Prove Week 09 Task. It determines the postage required for a single piece of retail first-class mail.</p>
+
+  <form action="/getrate">
+    <div class="row row-fluid">
+      <div class="col-sm-4">
+              <p>Calculated rate = xxxx</p>
+      </div>
+      <div class="col-sm-4">
+
+         <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Calculate Rates</a>
+      </div>
+
+ </div>
+  </div>
+   
+    <a type="button" class="btn btn-lg btn-primary" href="/"><span class="glyphicon glyphicon-download"></span> Back</a>
+  </div>
+</div>
+
+</body>
+</html>
