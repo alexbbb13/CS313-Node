@@ -17,16 +17,22 @@
     <p>This is a Node application for the CS313 course Prove Week 09 Task. It determines the postage required for a single piece of retail first-class mail.</p>
 
   <form>
-  <div class="col-sm-2">
-    <select class="form-control" id="postage_type">
-     
-      <option value="0">Letters (Stamped)</option>
-      <option value="1">Letters (Metered)</option>
-      <option value="2">Large Envelopes (Flats)</option>
-      <option value="3">First-Class Package Service—Retail</option>
-    </select>
+    <div class="row">
+      <div class="col-sm-2">
+        <select class="form-control" id="postage_type">
+         
+          <option value="0">Letters (Stamped)</option>
+          <option value="1">Letters (Metered)</option>
+          <option value="2">Large Envelopes (Flats)</option>
+          <option value="3">First-Class Package Service—Retail</option>
+        </select>
+      </div>
+      <div class="col-sm-2">
      <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Calculate Rates</a>
+    </div>
+
    </form>
+ </div>
   </div>
    
     <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
