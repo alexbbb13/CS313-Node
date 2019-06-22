@@ -7,5 +7,14 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .get('/getrate', (req, res) => res.render('pages/getrate'))
+  .get('/getrate', (req, res) => getRate(req, res))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+function getRate(req, res) {
+	res.render('pages/getrate');
+}
+
+function getSmth('/something', (req, res) => {
+    req.query.color1 === 'red'  // true
+    req.query.color2 === 'blue' // true
+}
