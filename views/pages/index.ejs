@@ -25,7 +25,7 @@
       </div>
       </div>
       <div class="col-sm-4">
-        <select class="form-control" name="postage_type" id="activitySelector">
+        <select class="form-control selectpicker" name="postage_type" >
          
           <option value="0">Letters (Stamped)</option>
           <option value="1">Letters (Metered)</option>
@@ -52,11 +52,12 @@
 </div>
 
 </body>
-<script> $(function () {
-  $("#activitySelector").on("changed.bs.select", function(e, clickedIndex, newValue, oldValue) {
-    var selectedD = $(this).find('option').eq(clickedIndex).text();
-    alert("sasd");
-    console.log('selectedD: ' + selectedD + '  newValue: ' + newValue + ' oldValue: ' + oldValue);
+<script> $(function() {
+
+  $("select").on("changed.bs.select", 
+        function(e, clickedIndex, newValue, oldValue) {
+      console.log(this.value, clickedIndex, newValue, oldValue)
   });
+
 });</script>
 </html>
