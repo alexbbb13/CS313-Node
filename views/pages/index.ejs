@@ -16,16 +16,17 @@
     <h1>USPS Postage Rates Calculator</h1>
     <p>This is a Node application for the CS313 course Prove Week 09 Task. It determines the postage required for a single piece of retail first-class mail.</p>
 
+name="blah" value="test" type="text"
   <form action="/getrate">
     <div class="row row-fluid">
       <div class="col-sm-4">
       <div class="form-group">
         <label for="weight">Weight in lbs:</label>
-        <input type="text" class="form-control" id="weight">
+        <input type="text" class="form-control" name="weight">
       </div>
       </div>
       <div class="col-sm-4">
-        <select class="form-control" id="postage_type">
+        <select class="form-control" name="postage_type">
          
           <option value="0">Letters (Stamped)</option>
           <option value="1">Letters (Metered)</option>
