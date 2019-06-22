@@ -2,14 +2,7 @@
 <html>
 <head>
   <% include ../partials/header.ejs %>
-  <script> $(function() {
 
-  $("select").on("changed.bs.select", 
-        function(e, clickedIndex, newValue, oldValue) {
-      console.log(this.value, clickedIndex, newValue, oldValue)
-  });
-
-});</script>
 </head>
 
 <body>
@@ -28,17 +21,17 @@
     <div class="row row-fluid">
       <div class="col-sm-4">
       <div class="form-group">
-        <label for="weight" id="activityLabel">Weight in lbs:</label>
+        <label for="weight" id="activityLabel">Weight:</label>
         <input type="text" class="form-control" name="weight">
       </div>
       </div>
       <div class="col-sm-4">
         <select class="form-control selectpicker" name="postage_type" >
          
-          <option value="0">Letters (Stamped)</option>
-          <option value="1">Letters (Metered)</option>
-          <option value="2">Large Envelopes (Flats)</option>
-          <option value="3">First-Class Package Service—Retail</option>
+          <option value="0">Letters (Stamped) (Weight in oz)</option>
+          <option value="1">Letters (Metered) (Weight in oz) </option>
+          <option value="2">Large Envelopes (Flats) (Weight in lbs)</option>
+          <option value="3">First-Class Package Service—Retail (Weight in lbs)</option>
         </select>
       </div>
       <div class="col-sm-4">

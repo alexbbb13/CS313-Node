@@ -37,24 +37,24 @@ function prepareData(req){;
 	return { calculatedRate: resultRes }
 }
 
-/*
- <option value="0">Letters (Stamped)</option>
-          <option value="1">Letters (Metered)</option>
-          <option value="2">Large Envelopes (Flats)</option>
-          <option value="3">First-Class Package Service—Retail</option>
-*/
 function calcLettersStamped(weight) {
 	var intvalue = Math.round( weight );
-// 	Weight Not Over (oz.)	 
-// 1	$0.55
-// 2	0.70
-// 3	0.85
-// 3.53	1.00
-	return 10;
+	var rates = [0.55
+	,0.70
+	,0.85
+	,1.00]
+	if(intvalue > 3) return 1
+	return(rates[intvalue]);
 }
 
 function calcLettersMetered(weight) {
-	return 20;
+	var intvalue = Math.round( weight );
+	var rates = [0.50
+	,0.65
+	,0.80
+	,0.95]
+	if(intvalue > 3) return 0.95
+	return(rates[intvalue]);
 }
 
 function calcLargeEnvelopes(weight) {
@@ -75,14 +75,25 @@ var rates = [25.50
 ,50.40
 ,52.00];
 var intvalue = Math.round( weight );
-if(intvalue > 15) return -1
+if(intvalue > 15) return 52.00
 return(rates[intvalue]);
 }
 
 function calcFirstClass(weight) {
-	return 40;
+var rates = [3.66
+,3.66
+,3.66
+,3.66
+,4.39
+,4.39
+,4.39
+,4.39
+,5.19
+,5.19
+,5.19
+,5.19
+,5.71];
+var intvalue = Math.round( weight );
+if(intvalue > 13) return calcLargeEnvelopes(weight);
+return(rates[intvalue]);
 }
-// function getSmth('/something', (req, res) => {
-//     req.query.color1 === 'red'  // true
-//     req.query.color2 === 'blue' // true
-// }
