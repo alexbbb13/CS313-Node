@@ -24,4 +24,10 @@
     border: 2px solid white; }
     .jumbotron .lang-logo img {
       max-width: 100%; }
+      @media (min-width: 768px) {
+  .row-fluid {
+    display: flex;
+    align-items: flex-end;
+  }
+
 
