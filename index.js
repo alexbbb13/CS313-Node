@@ -45,11 +45,11 @@ function prepareData(req){;
 */
 function calcLettersStamped(weight) {
 	var intvalue = Math.round( weight );
-	Weight Not Over (oz.)	 
-1	$0.55
-2	0.70
-3	0.85
-3.53	1.00
+// 	Weight Not Over (oz.)	 
+// 1	$0.55
+// 2	0.70
+// 3	0.85
+// 3.53	1.00
 	return 10;
 }
 
