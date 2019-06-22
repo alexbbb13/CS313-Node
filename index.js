@@ -52,7 +52,25 @@ function calcLettersMetered(weight) {
 }
 
 function calcLargeEnvelopes(weight) {
-	return 30;
+var rates = [25.50
+,25.60
+,25.70
+,25.80
+,25.85
+,27.05
+,30.95
+,33.90
+,37.25
+,38.70
+,40.75
+,43.25
+,45.50
+,48.20
+,50.40
+,52.00];
+var intvalue = Math.round( weight );
+if(intvalue > 15) return -1
+return(rates[intvalue]);
 }
 
 function calcFirstClass(weight) {
