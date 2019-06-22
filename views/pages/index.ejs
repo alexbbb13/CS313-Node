@@ -2,6 +2,14 @@
 <html>
 <head>
   <% include ../partials/header.ejs %>
+  <script> $(function() {
+
+  $("select").on("changed.bs.select", 
+        function(e, clickedIndex, newValue, oldValue) {
+      console.log(this.value, clickedIndex, newValue, oldValue)
+  });
+
+});</script>
 </head>
 
 <body>
@@ -52,12 +60,5 @@
 </div>
 
 </body>
-<script> $(function() {
 
-  $("select").on("changed.bs.select", 
-        function(e, clickedIndex, newValue, oldValue) {
-      console.log(this.value, clickedIndex, newValue, oldValue)
-  });
-
-});</script>
 </html>
