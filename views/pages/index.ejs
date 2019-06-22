@@ -52,7 +52,11 @@
 </div>
 
 </body>
-<script type="text/javascript">$('activitySelector').select(function(){
-   alert($('activitySelector').val() + ' was just selected');
+<script> $(function () {
+  $("#activitySelector").on("changed.bs.select", function(e, clickedIndex, newValue, oldValue) {
+    var selectedD = $(this).find('option').eq(clickedIndex).text();
+    alert("sasd");
+    console.log('selectedD: ' + selectedD + '  newValue: ' + newValue + ' oldValue: ' + oldValue);
+  });
 });</script>
 </html>
