@@ -14,7 +14,7 @@ function getRate(req, res) {
 	res.render('pages/getrate');
 }
 
-function getSmth('/something', (req, res) => {
-    req.query.color1 === 'red'  // true
-    req.query.color2 === 'blue' // true
-}
+// function getSmth('/something', (req, res) => {
+//     req.query.color1 === 'red'  // true
+//     req.query.color2 === 'blue' // true
+// }
