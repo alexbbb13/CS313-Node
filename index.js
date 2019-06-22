@@ -1,16 +1,19 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-
+	
 express()
   .use(express.static(path.join(__dirname, 'public')))
+  .use(express.json())
+  .use(express.urlencoded())
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .post('/getrate', (req, res) => res.render('pages/result', prepareData(req)))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-function prepareData(req){
+function prepareData(req){;
+	console.log(req)
 	const weight = Number(req.body.weight);
 	const postageType = Number(req.body.postage_type);
 	switch(postageType) {
